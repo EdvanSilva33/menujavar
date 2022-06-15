@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="center">
+      <div class="logo"> <img src="./images/logo.svg" alt="logo da pagina"> </div><!--aqui fixa o logo da pagina-->
+
+      <div class="mini-menu"><!--criamos aqui a parte de menu-->
+      <div class="option2">
+              <div> <img src="./images/icon-todo.svg" alt=""> Todo List</div>
+              <div > <img src="./images/icon-calendar.svg" alt=""> Calendar</div>
+              \<div > <img src="./images/icon-planning.svg" alt=""> Planning</div>
+              <div> <img  src="./images/icon-reminders.svg" alt=""> Reminders</div>
+              
+      </div> 
+
+      </div><!---aqui e a parte no menu mobile-->
+
+      <div class="nav"><!--aqui para segura colocou um conteiner-->
+        <div class="menudrop">
+          <input type="text" class="textbox" placeholder="Features" readonly>
+          <div class="option">
+              <div onclick="show('Todo List')"> <img src="./images/icon-todo.svg" alt=""> Todo List</div>
+              <div onclick="show('Calendar')"> <img src="./images/icon-calendar.svg" alt=""> Calendar</div>
+              <div onclick="show('Reminders')"> <img  src="./images/icon-reminders.svg" alt=""> Reminders</div>
+              <div onclick="show('Planning')"> <img src="./images/icon-planning.svg" alt=""> Planning</div>
+          </div>
+        </div>
+        <div class="menudrop2">
+        <input type="text" class="textbox2" placeholder="Company" readonly>
+        <div class="option">
+            <div onclick="look('History')">  History</div>
+            <div onclick="look('Out Team')"> Out Team</div>
+            <div onclick="look('Blog')">  Blog</div>
+            
+        </div>
+      </div><!---segundo  menu interativo com mudança no top-->
+          
+           <a href="#" class="link" >Careers</a>
+           <a href="#" class="link"> About</a>
+      </div>
+
+
+      <div class="login">
+           <p>Login</p>
+           <button>Register</button> 
+      </div>
+    </div><!----aliamento do top-->
+  </header><!---top do site-->
+  
+    <main class="center">
+      <div class="mini-imagen"></div><!--imagen mobile acrecentada-->
+      <div class="texto" >
+        <h1>Make
+          remote work</h1>
+        <p>Get your team in sync, no matter your location.
+           Streamline processes, create team rituals, and
+            watch productivity soar.</p>
+            <button class="btn"> Learn more</button>
+            <div class="icons">
+              <div class="icon"> <img src="./images/client-databiz.svg" alt=""> </div>
+              <div class="icon"> <img class="audio" src="./images/client-audiophile.svg" alt=""></div>
+              <div class="icon"> <img src="./images/client-meet.svg" alt=""></div>
+              <div class="icon"> <img src="./images/client-maker.svg" alt=""></div>
+            </div><!---imagens do icons do menu -->
+
+          </div>
+        <div class="imag">
+          <img src="./images/image-hero-desktop.png" alt="">
+        </div><!--imagen comercial da pagina-->
+      
+     
+
+      
+
+ 
+    </main>
+
+ <div class="space-bottom"></div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="http://instagram.com/edvancodigo">@edvancodigo</a>.
+  </div>
+ <script>
+   function show(anything){
+     document.querySelector('.textbox').value = anything; // aqui vai receber o valor na caixa quando clicado
+   }
+   let menudrop = document.querySelector('.menudrop');
+   menudrop.onclick = function(){
+     menudrop.classList.toggle('active'); // função fazer o dropdown do menu
+   }
+   function look(anything){
+     document.querySelector('.textbox2').value = anything;
+   }
+   const menudrop2 = document.querySelector('.menudrop2');
+   menudrop2.onclick = function(){
+     menudrop2.classList.toggle('active'); // função fazer o dropdown do menu
+   }
+ </script>
+
+</body>
+</html>
