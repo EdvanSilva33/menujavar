@@ -19,16 +19,20 @@
     <div class="center">
       <div class="logo"> <img src="./images/logo.svg" alt="logo da pagina"> </div><!--aqui fixa o logo da pagina-->
 
-      <div class="mini-menu"><!--criamos aqui a parte de menu-->
-      <div class="option2">
-              <div> <img src="./images/icon-todo.svg" alt=""> Todo List</div>
-              <div > <img src="./images/icon-calendar.svg" alt=""> Calendar</div>
-              \<div > <img src="./images/icon-planning.svg" alt=""> Planning</div>
-              <div> <img  src="./images/icon-reminders.svg" alt=""> Reminders</div>
-              
-      </div> 
+      <!--criamos aqui a parte de menu-->
 
-      </div><!---aqui e a parte no menu mobile-->
+      <nav id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+          <span id="hamburger"></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="/"><img src="./images/icon-todo.svg" alt=""> Todo List</a></li>
+          <li><a href="/"><img src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
+          <li><a href="/"><img  src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
+          <li><a href="/"><img src="./images/icon-planning.svg" alt=""> Planning</a></li>
+        </ul>
+      </nav>
+      <!---aqui e a parte no menu mobile-->
 
       <div class="nav"><!--aqui para segura colocou um conteiner-->
         <div class="menudrop">
@@ -79,9 +83,7 @@
             </div><!---imagens do icons do menu -->
 
           </div>
-        <div class="imag">
-          <img src="./images/image-hero-desktop.png" alt="">
-        </div><!--imagen comercial da pagina-->
+        <div class="imag"></div> <!--imagen comercial da pagina-->
       
      
 
@@ -111,6 +113,26 @@
    menudrop2.onclick = function(){
      menudrop2.classList.toggle('active'); // função fazer o dropdown do menu
    }
+
+   
+   const btnMobile = document.getElementById('btn-mobile');
+
+    function toggleMenu(event) {
+      if (event.type === 'touchstart') event.preventDefault();
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+      const active = nav.classList.contains('active');
+      event.currentTarget.setAttribute('aria-expanded', active);
+      if (active) {
+        event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+      } else {
+        event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+      }
+    }
+    
+    btnMobile.addEventListener('click', toggleMenu);
+    btnMobile.addEventListener('touchstart', toggleMenu); 
+
  </script>
 
 </body>

@@ -28,7 +28,7 @@ header{
     max-width: 140px;
  
 }
-
+/*inicio do menu do site*/
 .nav{ 
     display: flex;
     width: 100%;
@@ -171,6 +171,9 @@ header{
     background-color: hsl(199, 100%, 50%);
     color: #fff;
 }
+/*fim do  menu do site*/
+
+
 .link{
     font-size: 16px;
     margin: 10px 70px 0 0;
@@ -202,9 +205,10 @@ header{
 .login p, button{
     cursor: pointer;
 }
-.mini-menu{
+
+#btn-mobile, #menu {
     display: none;
-}
+  }
 /********************/
 .texto{
      
@@ -228,11 +232,16 @@ header{
     line-height: 30px;
     margin-bottom: 30px;
 }
+/*textos do site*/
 
+.imag{
+  background-image: url("../images/image-hero-desktop.png") ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 650px;
+/*imagen lateral do site */
 
-.imag img{
-  width: 100%;
-  max-width: 520px;
   
    
 }
@@ -270,7 +279,7 @@ header{
 
 @media screen and (max-width:900px) {
     
-.imag img{
+.imag{
     display: none;
     
      
@@ -289,15 +298,11 @@ header{
       width: 400px;
       height: 300px;
       background-image: url(../images/image-hero-mobile.png);
-      background-size: cover;
+      background-size: contain;
   }
-    .nav{
-        display: block;
-        position: relative;
-         width: 250px;
-        height: 400px;
-        background-color: #fff;
-    }
+  .nav{
+    display: none;
+  }
     .login{
         display: none;
     }
@@ -328,27 +333,74 @@ header{
     .btn{
       margin: 20px 125px;
     }
-
-    .mini-menu{
-      display: none;
-        position: absolute;
-         width: 40px;
-        height: 40px;
-        background-image: url('../images/icon-menu.svg');
-        cursor: pointer;
-          right: 180px;
-            top: 50px;
-    }
-   .option2 div{
-       top: 50px;
-       position: absolute;
-        background-color: #fff;
-        height: 400px;
-        width: 200px;
-    }
-    .option2 div img{
-        margin-top: 100px;
-        display: block;
-
-    }
+/*menu mobile*/
+#menu {
+    display: block;
+    position: absolute;
+    width: 70%;
+    top: 110px;
+    right: 10px;
+    background: #e7e7e7;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    border-radius: 15px;
+  }
+  #nav.active #menu {
+    height: 80%;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a:hover{
+    color: red;
+    background-color: aqua;
+  }
+  #menu li{
+    padding: 10%;
+  }
+  #menu a {
+     padding: 10% 25% ;
+     text-decoration: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    font-size: 20px;
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    margin-top: -40px;
+    margin-left: 300px;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 25px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+   
 }
