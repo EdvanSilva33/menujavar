@@ -213,7 +213,7 @@ header{
 .texto{
      
    
-    margin-top: 150px;
+    margin-top: 0px;
     padding-left: 100px;
     margin-left: 50px;
     width: 100%;
@@ -239,7 +239,7 @@ header{
   background-size: contain;
   background-repeat: no-repeat;
   width: 500px;
-  height: 650px;
+  height: 500px;
 /*imagen lateral do site */
 
   
