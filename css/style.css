@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Epilogue:wght@500;700&family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{font-family: 'Epilogue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(160, 160, 160, 0.418);
+    z-index: -3;
+}
+header{
+    width: 100%;
+}
+.center{
+   
+    
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+}
+.logo{
+    padding-top: 10px;
+   
+    margin-top: 50px;
+    width: 100%;
+    max-width: 140px;
+ 
+}
+/*inicio do menu do site*/
+.nav{ 
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 50px 20px;
+}
+.menudrop{
+    position: relative;
+    width: 160px;
+    height: 50px;
+}
+.menudrop2{
+    position: relative;
+    width: 160px;
+    height: 50px;
+}
+.menudrop::before{
+    content: ' ';
+    position: absolute;
+    right: 60px;
+    top: 14px;
+    z-index: 10000;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #333;
+    border-top: 1px solid rgba(218, 218, 218, 0.3);
+    border-right: 1px solid rgba(218, 218, 218, 0.3);
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.menudrop2::before{
+    content: ' ';
+    position: absolute;
+    right: 60px;
+    top: 14px;
+    z-index: 10000;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #333;
+    border-top: 1px solid rgba(218, 218, 218, 0.3);
+    border-right: 1px solid rgba(218, 218, 218, 0.3);
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.menudrop.active::before{
+    top:18px;
+    transform: rotate(-225deg);
+}
+.menudrop2.active::before{
+    top:18px;
+    transform: rotate(-225deg);
+}
+.menudrop input{
+    position: absolute;
+    font-size: 15px;
+    color: #000;
+    border: none;
+    background-color: rgba(204, 202, 202, 0.3);
+    width:70%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgb(0, 0, 0, 0.05);
+    top: 0;
+    left: 0;
+    outline: none;
+    cursor: pointer;
+}
+.menudrop2 input{
+    position: absolute;
+    font-size: 15px;
+    color: #000;
+    border: none;
+    background-color: rgba(204, 202, 202, 0.3);
+    width:70%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgb(0, 0, 0, 0.05);
+    top: 0;
+    left: 0;
+    outline: none;
+    cursor: pointer;
+}
+.menudrop .option{
+    border-radius: 10px;
+    position: absolute;
+    top:40px;
+    left: -60px  ;
+    background-color: aliceblue;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 10px 15px 30px rgb(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: none;
+}
+.menudrop2 .option{
+    border-radius: 10px;
+    position: absolute;
+    top:40px;
+    left: -40px  ;
+    background-color: aliceblue;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 10px 15px 30px rgb(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: none;
+}
+.menudrop.active .option{
+    display: block;
+}
+.menudrop2.active .option{
+    display: block;
+}
+
+.menudrop .option div{
+    font-size: 16px;
+    padding: 10px 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menudrop2 .option div{
+    font-size: 16px;
+    padding: 10px 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menudrop .option div img{
+    margin-right: 10px;
+}
+.menudrop .option div:hover{
+    background-color: hsl(199, 100%, 50%);
+    color: #fff;
+}
+.menudrop2 .option div:hover{
+    
+    
+    background-color: hsl(199, 100%, 50%);
+    color: #fff;
+}
+/*fim do  menu do site*/
+
+
+.link{
+    font-size: 16px;
+    margin: 10px 70px 0 0;
+    text-decoration: none;
+    color:#333;
+
+}
+
+.login{margin: 20px auto;
+    
+   
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    padding: 20px 0 0 15%;
+}
+.login p{
+    margin-top: 20px;
+}
+.login button{
+    font-size: 15px;
+    background-color: transparent;
+    border-radius: 15px;
+    margin: 10px 20px;
+    width: 100px;
+    height: 45px;
+}
+
+.login p, button{
+    cursor: pointer;
+}
+
+#btn-mobile, #menu {
+    display: none;
+  }
+/********************/
+.texto{
+     
+   
+    margin-top: 0px;
+    padding-left: 100px;
+    margin-left: 50px;
+    width: 100%;
+    max-width: 700px;
+  
+}
+.texto h1{
+    font-size: 60px;
+    width: 400px;
+}
+
+.texto p{
+    margin-top: 40px;
+    width: 100%;
+    max-width: 400px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+/*textos do site*/
+
+.imag{
+  background-image: url("../images/image-hero-desktop.png") ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+/*imagen lateral do site */
+
+  
+   
+}
+.space-bottom{
+    height: 80px;
+}
+
+.btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
+}
+.btn:hover{
+    color: #000;
+    background-color: transparent;
+}
+.icons{
+    
+    margin-top: 100px;
+    display: flex;
+}
+.icon{
+    margin-right: 50px;
+}
+.icon img{
+    width: 100%;
+}
+.audio{
+    margin-top: -10px;
+}
+/**iniciamos a reponsabilidade */
+
+@media screen and (max-width:900px) {
+    
+.imag{
+    display: none;
+    
+     
+  }
+  .logo{
+    margin-top: 30px;
+  }
+  .logo img{
+      
+      margin-left: 40px;
+      width: 120px;
+  }
+  .mini-imagen{
+      background-repeat: no-repeat;
+      margin: 15px auto;
+      width: 400px;
+      height: 300px;
+      background-image: url(../images/image-hero-mobile.png);
+      background-size: contain;
+  }
+  .nav{
+    display: none;
+  }
+    .login{
+        display: none;
+    }
+    .center{
+        padding: 20px;
+        display: block;
+    }
+    .texto{
+        padding: 10px;
+        width: 400px;
+        margin: 30px auto;
+    }
+    .texto h1{
+        font-size: 40px;
+    }
+    .icons{
+    
+        margin-top: 100px;
+       
+    }
+    .icon{
+        margin: 10px;
+    }
+    .icon img{
+        width: 80px;
+       
+    }
+    .btn{
+      margin: 20px 125px;
+    }
+/*menu mobile*/
+#menu {
+    display: block;
+    position: absolute;
+    width: 80%;
+    top: 110px;
+    right: 10px;
+    background: #e7e7e7;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    border-radius: 15px;
+  }
+  #nav.active #menu {
+    height: 75%;
+    visibility: visible;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  #menu a:hover{
+    color: red;
+    background-color: rgb(113, 223, 223);
+  }
+  #menu li{
+    padding: 10%;
+  }
+  #menu a {
+    
+  
+     padding: 12% 18% ;
+     text-decoration: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    font-size: 20px;
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    margin-top: -40px;
+    margin-left: 300px;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 25px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+   
+}
